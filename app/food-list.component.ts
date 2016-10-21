@@ -8,11 +8,16 @@ import { Food } from './food.model';
   </select>
   <div *ngFor="let currentFood of childFoodList">
     <food-display [food]="currentFood"></food-display>
+    <button (click)="editButtonClick(currentFood)">Edit</button>
   </div>
   `
 })
 
 export class FoodListComponent {
   @Input() childFoodList: Food[];
+  @Output() clickSender = new EventEmitter();
+  editButtonClick(foodEdit: Food) {
+    this.clickSender.emit(foodEdit);
+  }
 
 }

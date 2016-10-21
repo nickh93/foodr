@@ -12,8 +12,8 @@ import { Food } from './food.model';
       (clickSender)="showDetails($event)"
     ></food-list>
     <edit-food
-      [childSelectedFood]="slectedFood"
-      (editClickSender)="finishedEditing()"
+      [childSelectedFood]="selectedFood"
+      (editClickedSender)="finishedEditing()"
     ></edit-food>
     <new-food
       (newFoodSender)="addFood($event)"
@@ -30,6 +30,10 @@ export class AppComponent {
     new Food("empanadas", "Two hamburger buns with lettuce, tomamto, raw onions, mayonise, ketchup, and a side of fries", 350),
     new Food("Ajiaco", "Two hamburger buns with lettuce, tomamto, raw onions, mayonise, ketchup, and a side of fries", 350),
   ];
+  selectedFood: Food = null;
+  showDetails(clickedFood: Food) {
+    this.selectedFood = clickedFood;
+  }
   addFood(newFoodFromChild: Food) {
     this.masterFoodList.push(newFoodFromChild);
   }

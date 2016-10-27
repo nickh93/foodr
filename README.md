@@ -11,16 +11,16 @@ _This application allows the user to log the food that they have eaten in a part
 ## Specifications
 
 _Program lists user's logged information_
-  * example input: ['hamburger', 'Two hamburger buns with lettuce, tomamto, raw onions, mayonise, ketchup, and a side of fries', '500']
+  * example input: ['hamburger', 'Two hamburger buns with lettuce, tomato, raw onions, mayonise, ketchup, and a side of fries', '500']
   * example output: * hamburger
-                      * Two hamburger buns with lettuce, tomamto, raw onions, mayonise, ketchup, and a side of fries
+                      * Two hamburger buns with lettuce, tomato, raw onions, mayonnaise, ketchup, and a side of fries
                       * 500
 
 _when edit button is clicked, the program will update the information and display it on the list_
 
 * example input: edit calories to 600
 * example output: * hamburger
-                    * Two hamburger buns with lettuce, tomamto, raw onions, mayonise, ketchup, and a side of fries
+                    * Two hamburger buns with lettuce, tomato, raw onions, mayonnaise, ketchup, and a side of fries
                     * 600
 
 ## Prerequisites

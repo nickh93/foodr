@@ -9,7 +9,7 @@ import { Food } from './food.model';
     <option value="high">High Calories</option>
     <option value="low">Low Calories</option>
   </select>
-  <div *ngFor="let currentFood of childFoodList">
+  <div *ngFor="let currentFood of childFoodList | calories:selectedCalories">
     <food-display [food]="currentFood"></food-display>
     <button (click)="editButtonClick(currentFood)">Edit</button>
   </div>
